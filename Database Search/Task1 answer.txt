@@ -381,3 +381,88 @@ Finance
 
 Government
 May require special configurations or on-premise components.
+
+
+
+Database Engines and Languages
+
+
+A database engine (or database management system engine) is the core software component responsible for:
+
+Storing data
+
+Retrieving data
+
+Processing queries
+
+Ensuring security, concurrency, transactions, and recovery
+
+| Database Engine          | Vendor               | Notes                                                  |
+| ------------------------ | -------------------- | ------------------------------------------------------ |
+| **Microsoft SQL Server** | Microsoft            | Enterprise-grade RDBMS with strong analytics support   |
+| **MySQL**                | Oracle (Open-source) | Popular for web apps (LAMP stack)                      |
+| **Oracle Database**      | Oracle               | Highly scalable, used in large enterprise environments |
+| **PostgreSQL**           | Open-source          | Known for standards compliance & extensibility         |
+
+
+| Database Engine | Primary Query Language          | Description                                                   |
+| --------------- | ------------------------------- | ------------------------------------------------------------- |
+| **SQL Server**  | **T-SQL** (Transact-SQL)        | Microsoft’s extended version of SQL                           |
+| **Oracle DB**   | **PL/SQL**                      | Oracle’s procedural language extension                        |
+| **MySQL**       | **ANSI SQL + MySQL extensions** | More lightweight; uses stored program syntax                  |
+| **PostgreSQL**  | **ANSI SQL + PL/pgSQL**         | Very compatible with standards; has many procedural languages |
+
+
+Is There a Relationship Between the Engine and the Language?
+
+Yes — each database engine has its own dialect of SQL.
+
+✔ What’s shared?
+
+All engines support ANSI SQL (standard SQL)
+
+Basic commands like:
+
+SELECT, INSERT, UPDATE, DELETE
+
+CREATE TABLE, DROP TABLE
+
+Simple joins and aggregations
+
+✔ What’s different?
+
+Each engine adds extra features, such as:
+
+Procedural logic (BEGIN...END, loops, conditions)
+
+Special data types
+
+Functions (string, date, math)
+
+System procedures
+
+Performance hints (e.g., optimizer directives)
+
+Example differences:
+
+SQL Server’s TOP 10 vs MySQL’s LIMIT 10 vs Oracle’s FETCH FIRST 10 ROWS
+
+Oracle uses sequences (my_seq.NEXTVAL), MySQL uses AUTO_INCREMENT.
+
+✅ Can One Language Work Across Different Engines?
+✔ Standard SQL works across all engines… to a point
+
+Basic SQL queries such as:
+
+SELECT * FROM Customers WHERE Country = 'USA';
+
+
+
+…will work in almost any database.
+
+| Language                    | Works Only On |
+| --------------------------- | ------------- |
+| T-SQL                       | SQL Server    |
+| PL/SQL                      | Oracle        |
+| PL/pgSQL                    | PostgreSQL    |
+| MySQL stored program syntax | MySQL         |
