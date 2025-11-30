@@ -10,4 +10,95 @@ Schema changes may be difficult in highly dynamic environments.
 
 
 
+"3"
+
+1. System Analyst
+
+A System Analyst studies an organization’s processes and identifies what the system or software must do.
+
+Key Responsibilities:
+
+Gather and analyze business requirements
+
+Create system specifications and workflow diagrams
+
+Act as a bridge between business users and technical teams
+
+Ensure the final system meets business needs
+
+2. Database Designer
+
+A Database Designer is responsible for planning how data will be stored, organized, and related.
+
+Key Responsibilities:
+
+Design the database schema (tables, relationships, constraints)
+
+Normalize data to reduce redundancy
+
+Ensure the model supports performance, security, and scalability
+
+Work closely with system analysts and developers to align with requirements
+
+3. Database Developer
+
+A Database Developer builds and maintains the database components.
+
+Key Responsibilities:
+
+Write SQL queries, stored procedures, triggers, and functions
+
+Implement the database design into an actual DBMS
+
+Optimize queries for speed
+
+Assist with integration between the database and applications
+
+4. DBA (Database Administrator)
+
+A Database Administrator manages, secures, and maintains the database after it is built.
+
+Key Responsibilities:
+
+Install, configure, and update the DBMS
+
+Monitor performance and troubleshoot issues
+
+Manage backups, recovery plans, and security controls
+
+Control user access and permissions
+
+Ensure availability and reliability of databases
+
+5. Application Developer
+
+An Application Developer builds the actual applications that use the database.
+
+Key Responsibilities:
+
+Develop front-end and/or back-end application logic
+
+Integrate application code with the database
+
+Implement user interfaces and workflows
+
+Test and debug the application
+
+Work with database developers to ensure efficient data access
+
+6. BI (Business Intelligence) Developer
+
+A BI Developer builds systems that help organizations analyze data and make decisions.
+
+Key Responsibilities:
+
+Develop dashboards, reports, and visualizations
+
+Build ETL pipelines (Extract, Transform, Load)
+
+Model data in warehouses or data marts
+
+Work with business teams to provide insights
+
+Optimize reporting performance
 
