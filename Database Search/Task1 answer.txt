@@ -215,3 +215,169 @@ Distributed / Cloud-distributed: large-scale web apps, global applications, high
 Hybrid cloud / distributed-cloud: companies wanting to scale out as demand grows, while avoiding on-prem hardware overhead. Many modern apps use cloud databases to get scalability + flexibility + resilience.
 
 In particular, distributed databases are often used as the “backend” for applications that need to handle high throughput, real-time data, or globally distributed user bases.
+
+
+
+
+Cloud Storage and Databases
+
+Cloud Storage
+
+Cloud storage is a service where data is stored on remote servers accessed via the internet, rather than on local physical devices. These servers are hosted and managed by cloud providers such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP).
+
+Key Features
+
+Accessible from anywhere through the internet
+
+Highly scalable (storage grows as needed)
+
+Managed security, backups, and maintenance
+
+Pay-as-you-go pricing
+
+Examples
+
+AWS S3
+
+Azure Blob Storage
+
+Google Cloud Storage
+
+Relation Between Cloud Storage and Databases
+
+Cloud storage and cloud databases are related but not the same:
+
+Cloud Storage
+
+Stores files, documents, images, videos, backups, logs, etc.
+
+Not structured like a database.
+
+Cloud Databases
+
+Full database systems hosted in the cloud.
+
+Store structured or semi-structured data.
+
+Support SQL queries, transactions, indexing, etc.
+
+How they relate
+
+Cloud storage can be used to hold backups of cloud databases.
+
+Databases may use cloud storage internally for scaling or durability (e.g., Google Spanner, Snowflake).
+
+Applications often use both:
+
+Cloud Storage for large files
+
+Cloud Database for transactional data
+
+Advantages & Disadvantages of Cloud-Based Databases
+
+Examples include Azure SQL, Amazon RDS, Google Cloud Spanner, MongoDB Atlas, etc.
+
+Advantages
+1. Scalability
+
+Automatically adjusts resources (CPU, memory, storage)
+
+Easy to scale up or out based on demand
+
+2. High Availability
+
+Built-in redundancy across regions or zones
+
+Automatic failover
+
+Minimal downtime
+
+3. Managed Maintenance
+
+Cloud providers handle:
+
+Backups
+
+Patching
+
+Updates
+
+Monitoring
+
+This reduces the workload on DBAs.
+
+4. Cost Efficiency
+
+Pay only for what you use
+
+No need to purchase physical servers
+
+Reduces IT overhead
+
+5. Security
+
+Data encryption at rest & in transit
+
+Access control & auditing
+
+Compliance certifications (ISO, GDPR, HIPAA support depending on provider)
+
+6. Global Access
+
+Applications can connect from anywhere
+
+Databases can replicate across regions for low latency
+
+Disadvantages
+1. Internet Dependency
+
+Requires a stable internet connection
+
+Latency may affect performance for real-time systems
+
+2. Ongoing Monthly Costs
+
+Costs can increase with:
+
+High storage
+
+High traffic
+
+Cross-region replication
+
+High compute power
+
+3. Limited Control
+
+Users cannot access the physical servers
+
+Some features may not be customizable
+
+Performance tuning is restricted compared to self-hosted databases
+
+4. Vendor Lock-In
+
+Moving from AWS → Azure → GCP can be difficult
+
+Migration can require rewriting parts of the application
+
+5. Security Risks
+
+Although cloud is secure, it introduces:
+
+Risk of misconfiguration (e.g., public access)
+
+Shared responsibility model
+
+Potential exposure if credentials are leaked
+
+6. Compliance Challenges
+
+Some industries have strict rules:
+
+Healthcare
+
+Finance
+
+Government
+May require special configurations or on-premise components.
