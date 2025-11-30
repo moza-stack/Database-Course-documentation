@@ -102,3 +102,116 @@ Work with business teams to provide insights
 
 Optimize reporting performance
 
+
+
+Types of Databases 
+
+Relational vs Non-Relational Databases
+What they are
+
+Relational databases store data in structured tables (rows & columns), with a predefined schema. Tables are related via keys (primary / foreign), enabling relationships between data entities. Data is accessed via SQL (Structured Query Language). 
+Coursera
++2
+insightsoftware
++2
+
+Non-relational databases (often called NoSQL) do not rely on fixed tables/rows. Instead they store data in flexible structures — e.g. documents (JSON/BSON), key-value pairs, wide-columns, graphs, etc
+| Feature                    | Relational                                                                                               | Non-Relational (NoSQL)                                                                                                           |
+| -------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Schema / Data structure    | Fixed schema, structured tables. ([C# Corner][1])                                                        | Dynamic / schema-less; supports documents, key-value, column-family, graph, etc. ([stackby.com][2])                              |
+| Queries & Relationships    | Powerful SQL queries, joins across tables — great for relational data. ([insightsoftware][3])            | Often simpler / specialized query mechanisms; relationships possible but less central. ([Secoda][4])                             |
+| Transactions & Consistency | Typically supports full ACID transactions, ensuring strong consistency. ([insightsoftware][3])           | Many trade strict consistency for flexibility/performance — eventual consistency or tunable consistency. ([stackby.com][2])      |
+| Scalability                | Usually scales vertically (bigger server), which may limit scaling at very large loads. ([AppMaster][5]) | Designed for horizontal scaling (across many servers/nodes), handling large or growing data volumes well. ([insightsoftware][3]) |
+| Flexibility                | Less flexible: schema changes can be disruptive. ([AlmaBetter][6])                                       | Highly flexible: can evolve data model quickly, handle varying/unstructured data. ([Castor Doc][7])                              |
+
+[1]: https://www.c-sharpcorner.com/article/difference-between-relational-and-non-relational-database/?utm_source=chatgpt.com "What Is The Difference Between Relational And Non-Relational Database"
+[2]: https://stackby.com/blog/relational-vs-non-relational-databases/?utm_source=chatgpt.com "Relational vs Non-Relational Databases | What’s the Difference?"
+[3]: https://insightsoftware.com/blog/whats-the-difference-relational-vs-non-relational-databases/?utm_source=chatgpt.com "Relational vs. Non-Relational Databases | insightsoftware"
+[4]: https://www.secoda.co/learn/what-are-the-differences-between-relational-and-non-relational-databases?utm_source=chatgpt.com "What Are the Differences Between Relational and Non-Relational Databases? | Secoda"
+[5]: https://appmaster.io/blog/relational-vs-non-relational-databases?utm_source=chatgpt.com "Relational vs. Non-Relational Databases | AppMaster"
+[6]: https://www.almabetter.com/bytes/articles/difference-between-relational-and-nonrelational-database?utm_source=chatgpt.com "Difference Between Relational and Non Relational Database"
+[7]: https://www.castordoc.com/data-strategy/non-relational-database-vs-relational-10-key-differences?utm_source=chatgpt.com "Non-Relational Database vs Relational: 10 Key Differences"
+
+Examples
+
+Relational: common RDBMS such as MySQL, PostgreSQL, Microsoft SQL Server, etc. 
+Coursera
++1
+
+Non-relational: e.g. MongoDB (document-store), Apache Cassandra (wide-column store) — both are examples of NoSQL DBs. 
+stackby.com
++2
+Amazon Web Services, Inc.
++2
+
+When to use which (Use-cases)
+
+Relational DB
+
+Use when data is highly structured and relationships matter (e.g. foreign-key relationships). For example: financial systems, banking, accounting, enterprise resource planning (ERP), CRM — where consistency and transactions are critical. 
+insightsoftware
++1
+
+When you need complex queries, joins, reporting, data integrity, ACID transactions.
+
+Non-Relational (NoSQL) DB
+
+Use when data is unstructured or semi-structured (e.g. JSON documents, user-generated content, logs). 
+Global Tech Council
++1
+
+When you need scalability and performance horizontally (e.g. big-data, high-throughput writes/reads). 
+Oracle
++2
+Global Tech Council
++2
+
+Suitable for fast-evolving data models or flexible schemas — e.g. content management systems, user profiles, social media data, IoT data ingestion. 
+stackby.com
++1
+
+Examples
+
+Using MongoDB for a social-media backend where each user’s profile and activity log may differ (flexible schema), or for storing logs/events.
+
+Using Cassandra for a high-volume telemetry or IoT platform, where many events/data points are collected and queried quickly across many machines.
+
+🌐 Centralized vs Distributed vs Cloud (Distributed-Cloud) Databases
+Definitions & Architecture
+
+Centralized database — All data resides in a single database instance, hosted at one location (server, mainframe, data center) and managed centrally. 
+Wikipedia
++1
+
+Distributed database — Data is spread across multiple servers (nodes), potentially across different physical/geographic locations. The distributed system works as a single logical database for the application. 
+Oracle
++2
+Educative
++2
+
+Cloud (or Cloud-backed) databases / Cloud-distributed databases — A variant of distributed databases that leverage cloud infrastructure: data is stored across cloud servers/data-centers, possibly distributed globally, with managed scalability, replication, and high availability. (Often the “distributed database in the cloud” model.)
+
+Key trade-offs
+
+Centralized: simpler to manage, consistent data (single point of truth), easier to maintain integrity and integrity constraints. But has a single point of failure; limited scalability; may become bottleneck. 
+Wikipedia
++1
+
+Distributed: offers horizontal scalability, high availability (if one node fails others can take over), and can serve globally distributed users with lower latency (by placing nodes closer to users) 
+Oracle
++1
+. However, complexity rises: data synchronization, consistency across nodes, replication overhead, potential latency. 
+Oracle
++1
+
+Cloud / Cloud-distributed: inherits advantages of distributed (scalability, resilience) and adds on-demand resource provisioning, global reach, managed infrastructure — reducing the burden of hardware management. Also supports dynamic scaling as usage grows or shrinks.
+
+Use-case Examples
+
+Centralized: small-to-medium organizations, legacy applications, internal systems where traffic and data volume are modest; e.g. a small company’s HR system, a local university’s student database, a small business’s inventory tracking on a single server.
+
+Distributed / Cloud-distributed: large-scale web apps, global applications, high-availability services, big-data platforms. For example: a global e-commerce site with users across continents; a SaaS platform serving users in multiple regions; real-time analytics or logging systems; distributed microservices architectures; global content-delivery systems.
+
+Hybrid cloud / distributed-cloud: companies wanting to scale out as demand grows, while avoiding on-prem hardware overhead. Many modern apps use cloud databases to get scalability + flexibility + resilience.
+
+In particular, distributed databases are often used as the “backend” for applications that need to handle high throughput, real-time data, or globally distributed user bases.
