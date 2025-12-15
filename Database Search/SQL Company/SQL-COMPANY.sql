@@ -21,7 +21,7 @@ CREATE TABLE Department (
     FOREIGN KEY (MgrSSN) REFERENCES Employee(SSN)
 );
 CREATE TABLE Locations (
-    Dnum INT,
+    Dnum INT ,
     Loc  VARCHAR(50),
     PRIMARY KEY (Dnum, Loc),
     FOREIGN KEY (Dnum) REFERENCES Department(Dnum)
