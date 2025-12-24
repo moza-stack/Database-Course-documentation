@@ -1,0 +1,34 @@
+
+NULL:
+
+In SQL, SET NULL is usually associated with foreign key constraints and ON DELETE/ON UPDATE actions. It defines what should happen to a foreign key in a child table when the corresponding row in the parent table is deleted or updated.
+
+
+Explanation:
+
+ON DELETE SET NULL: If a row in Parent is deleted, the ParentID in Child will be set to NULL.
+
+ON UPDATE SET NULL: If the primary key of Parent is updated, the ParentID in Child will be set to NULL.
+
+Important: The column in the child table (ParentID here) must allow NULLs. Otherwise, you’ll get an error.
+
+
+DEFAULT:
+
+In SQL, the DEFAULT keyword is used when you want a column to automatically have a specific value if no value is provided during an INSERT. This is useful for things like status flags, timestamps, or numeric counters.
+
+DEFAULT only applies when no value is given in the INSERT.
+
+It works with numbers, strings, dates, and even expressions like CURRENT_DATE.
+
+Not all SQL databases have exactly the same syntax. For example, MySQL uses ALTER TABLE table_name MODIFY column_name datatype DEFAULT default_value;.
+
+
+NO ACTION:
+
+In SQL, NO ACTION is a referential action you can specify when defining foreign keys. It controls what happens when a referenced row in the parent table is updated or deleted.
+
+
+
+CASCADE
+In SQL, CASCADE is a keyword used in the context of foreign keys and constraints to automatically propagate changes from a parent table to a child table. It helps maintain referential integrity without manually updating or deleting related records.
