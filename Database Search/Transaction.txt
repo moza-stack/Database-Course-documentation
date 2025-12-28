@@ -1,0 +1,68 @@
+In databases (especially SQL), a Transaction is a sequence of one or more operations that are treated as one single unit of work.
+
+Why transactions matter
+
+They protect your data from:
+
+Partial updates
+
+System crashes
+
+Logical errors
+
+Example: transferring money — you must debit one account and credit another together.
+
+ACID Properties (Very Important ⭐)
+
+A transaction follows ACID:
+
+Atomicity – All or nothing
+
+Consistency – Database remains valid
+
+Isolation – Transactions don’t interfere
+
+Durability – Changes stay after commit
+
+Basic SQL Transaction Commands
+
+START TRANSACTION;   -- or BEGIN
+
+INSERT INTO Orders VALUES (1, 'Laptop', 2);
+UPDATE Products SET Stock = Stock - 2 WHERE ProductID = 5;
+
+COMMIT;   
+
+
+If something goes wrong:
+
+ROLLBACK; -- undo all changes
+
+
+Example (Bank Transfer)
+
+START TRANSACTION;
+
+UPDATE Accounts
+SET Balance = Balance - 500
+WHERE AccountID = 1;
+
+UPDATE Accounts
+SET Balance = Balance + 500
+WHERE AccountID = 2;
+
+COMMIT;
+
+
+When to use transactions
+
+Use them when:
+
+Multiple related INSERT/UPDATE/DELETE
+
+Financial operations
+
+Inventory updates
+
+Booking / enrollment systems
+
