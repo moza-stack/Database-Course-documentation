@@ -1,0 +1,79 @@
+Stored Procedures (SQL)
+
+A stored procedure is a saved block of SQL code that you can execute whenever needed. It’s stored in the database and can include logic, parameters, and multiple SQL statements.
+
+
+Why use stored procedures?
+
+✅ Reusability – write once, use many times
+
+✅ Performance – precompiled, faster execution
+
+✅ Security – control access without exposing tables
+
+✅ Maintainability – business logic stays in the DB
+
+
+Basic Syntax (MySQL / SQL Server style)
+
+CREATE PROCEDURE procedure_name
+AS
+BEGIN
+    
+END;
+
+Example 1: Simple Stored Procedure
+
+CREATE PROCEDURE GetAllCourses
+AS
+BEGIN
+    SELECT * FROM Courses;
+END;
+
+
+Execute it:
+
+CALL GetAllCourses;        -- MySQL
+EXEC GetAllCourses;        -- SQL Server
+
+Update Using Stored Procedure
+
+CREATE PROCEDURE UpdateCoursePrice
+    @CourseID INT,
+    @NewPrice DECIMAL(6,2)
+AS
+BEGIN
+    UPDATE Courses
+    SET Price = @NewPrice
+    WHERE CourseID = @CourseID;
+END;
+
+
+When to use stored procedures?
+
+Business logic in databases
+
+Repeated complex queries
+
+Data validation and transactions
+
+Reporting & analytics queries (like your course/enrollment data)
+
+
+Stored Procedure with Parameters
+
+CREATE PROCEDURE GetCoursesByCategory
+    @CategoryID INT
+AS
+BEGIN
+    SELECT Title, Price
+    FROM Courses
+    WHERE CategoryID = @CategoryID;
+END;
+
+
+Execute:
+
+EXEC GetCoursesByCategory 2;
+
+
