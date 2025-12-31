@@ -167,7 +167,7 @@ SELECT
     l.DueDate,
     l.Status
 FROM Loan l
-JOIN Members m ON l.MemberID = m.MemberID
+JOIN Members m ON m.MemberID = l.MemberID
 JOIN Book b ON l.BookID = b.BookID
 WHERE l.Status IN ('Issued', 'Overdue');
 
@@ -296,7 +296,7 @@ JOIN Book B2 ON B.Genre = B2.Genre
 GROUP BY B.Title, B.Genre, B.Price
 HAVING B.Price > AVG(B2.Price);
 
----- Payment Pattern Analysis---
+---12- Payment Pattern Analysis---
 
 alter table Payment
 ADD Paymentmethod varchar (50);
@@ -629,7 +629,7 @@ GO
 
 
 
-	SELECT* FROM Loan
+	SELECT* FROM Book
 
 
 
